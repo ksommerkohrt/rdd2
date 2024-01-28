@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="rdd2" xmlns:xacro="http://ros.org/wiki/xacro">
+ 
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 .025 0" rpy="0 0 3.141592654"/>
+      <geometry>
+        <mesh filename="package://rdd2_description/meshes/RDD2Frame.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="base_footprint"/>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  </joint>
+
+</robot>
